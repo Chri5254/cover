@@ -1,0 +1,152 @@
+/* this is where all of your CSS styles go */
+body{
+	background: lightgrey;
+}
+.container{
+	width: 800px;
+	height: 1280px;
+	background: #ffffff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transition: 1s;
+	transition-delay: 1s;
+}
+
+
+.pink_oval{
+	width: 210px;
+	height: 85px;
+	background: #EA5E96;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50px 50px 50px 50px;
+	overflow: hidden;
+	transition: 1s;
+}
+	
+.white_circle{
+	width: 72px;
+	height: 72px;
+	background: white;
+	position: absolute;
+	left: 8px;
+	top: 6px;
+	border-radius: 100%;
+	box-shadow: 7px 1px 19px black;
+	cursor: pointer;
+}
+
+@font-face{
+	font-family: 'BalooBhaijaan2';
+	src: url(../fonts/BalooBhaijaan2-VariableFont_wght.ttf);
+}
+
+.first_text {
+font-family: BalooBhaijaan2;
+  letter-spacing: 2px;
+  font-size: 21px;
+  font-style: italic;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 90px;
+	transform: translate(-50%,-50%);
+}
+
+
+@font-face{
+	font-family: 'Roboto';
+	src: url(../fonts/SourceCodeVF-Upright.otf.woff2);
+}
+
+.second_text {
+ font-family: roboto;
+  font-size: 50px;
+  letter-spacing: 13px;
+  font-style: normal;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	top: 140px;
+	transform: translate(-50%,-50%);
+}
+
+.third_text {
+	font-family: roboto;
+font-size: 100px;
+text-align: center;
+letter-spacing: 16px;
+	position: absolute;
+	left: 50%;
+	top: 920px;
+	transform: translate(-50%,-50%);
+	animation: title_move 2s infinite alternate;
+}
+
+@keyframes title_move {
+	0% { font-variation-settings: "wght" 100; }
+	100% { font-variation-settings: "wght" 1000; }
+}
+
+.fourth_text {
+	font-family: BalooBhaijaan2;
+font-size: 22px;
+letter-spacing: 3px;
+text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 1120px;
+	transform: translate(-50%,-50%);
+}
+
+
+@keyframes white_circle_move {
+	0% { left: 8px; }
+	100% { left: 130px; }
+	
+}
+
+.white_circle {
+	animation: white_circle_move 1s;
+	position: relative;
+	animation-fill-mode: forwards;
+	animation-delay: .5s;
+}
+
+.container:hover {
+	background: #000000;
+	transition: 1s;
+}
+
+.container:hover .pink_oval {
+	background: #25B739;
+	transition: 1s;
+}
+
+.container:hover .white_circle{
+	animation: reset 1s;
+}
+
+@keyframes reset {
+	0% { left: 130px; }
+	100% { left: 8px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
